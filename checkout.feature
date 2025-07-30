@@ -13,10 +13,13 @@
 
             Esquema do Cenário: Cadastro Inválido
             Dado que eu estou na tela de checkout
-            Quando eu tento me cadastrar com os seguimtes dados:
+            Quando eu preencho <Nome>, <E-mail>, <Telefone> de forma incorreta
+            Então o sistema deve emitir uma mensagem de alerta informando o erro de preenchimento
+
+            Exemplos: 
+
             | Nome | e-mail             | Telefone   |
             | ""   | maria@ebac.com     | 99876-5432 |
             | João | email@inválido.com | 99876-5431 |
             | José | jose@ebac.com      | ""         |
-            Então o sistema deve emitir uma mensagem de alerta informando o erro de preenchimento
 
